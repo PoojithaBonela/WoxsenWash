@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=393, initial-scale=1.0">
+    <title>Frame 7 - Laundry Admin Search</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body, html {
+            width: 393px;
+            height: 844px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #fff;
+            font-family: 'Inter', sans-serif;
+        }
+
+        .laundry-admin-container {
+            background-color: #fff;
+            display: flex;
+            max-width: 393px;
+            width: 100%;
+            flex-direction: column;
+            overflow: hidden;
+            align-items: center;
+            color: #000;
+            margin: 0 auto;
+            padding: 121px 0 212px;
+            font: 800 15px/1 Inter, sans-serif;
+        }
+
+        .header {
+            align-self: stretch;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 7px 12px;
+            background-color: #d9d9d9;
+        }
+
+        .logo {
+            aspect-ratio: 1.13;
+            object-fit: contain;
+            object-position: center;
+            width: 43px;
+        }
+
+        .header-title {
+            font-weight: 800;
+        }
+
+        .profile-image {
+            aspect-ratio: 1.02;
+            object-fit: contain;
+            object-position: center;
+            width: 86px;
+            box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+            margin-top: 9px;
+        }
+
+        .search-container {
+            background-color: #d3dddf;
+            box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+            display: flex;
+            margin-top: 37px;
+            width: 100%;
+            max-width: 286px;
+            flex-direction: column;
+            padding: 71px 30px;
+        }
+
+        .search-label {
+            align-self: start;
+            margin-left: 10px;
+        }
+
+        .search-input {
+            background-color: #fff;
+            box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+            display: flex;
+            margin-top: 9px;
+            height: 45px;
+            width: 100%;
+            border: none;
+            padding: 0 10px;
+        }
+
+        .search-button {
+            background-color: #a5e4a4;
+            box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+            align-self: center;
+            display: flex;
+            margin-top: 68px;
+            width: 165px;
+            max-width: 100%;
+            gap: 7px;
+            padding: 8px 22px;
+            border: none;
+            cursor: pointer;
+        }
+
+        .search-icon {
+            aspect-ratio: 0.92;
+            object-fit: contain;
+            object-position: center;
+            width: 34px;
+        }
+
+        .search-text {
+            margin: auto 0;
+        }
+
+        .back-button {
+            background-color: #f3f3f3;
+            border: none;
+            color: #000;
+            cursor: pointer;
+            padding: 10px 20px;
+            margin: 20px;
+        }
+
+        .visually-hidden {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            white-space: nowrap;
+            border: 0;
+        }
+    </style>
+</head>
+<body>
+    <section class="laundry-admin-container">
+        <header class="header">
+            <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/3bd96beca5e6d946065ee240fcf9817088b098d4d32fb58b20ecfaa225833af5" alt="Laundry Admin Logo" class="logo">
+            <h1 class="header-title">Laundry Admin</h1>
+        </header>
+        
+        <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/908063ca899083572c08d6d8f3882780d9256ced0bca9ce49f4abc2a9ca57d68" alt="Admin Profile" class="profile-image">
+        
+        <form class="search-container">
+            <label for="studentId" class="search-label">Enter Student ID:</label>
+            <input type="text" id="studentId" class="search-input" aria-label="Enter Student ID" required>
+            
+            <button type="submit" class="search-button">
+                <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/1c0c113b955ead5fd1cc1c1ce60c9e9ab09f60ee06802c489eeb630bd1ed4587" alt="Search Icon" class="search-icon">
+                <span class="search-text">Search</span>
+            </button>
+        </form>
+
+        <!-- Back Button -->
+        <button class="back-button" onclick="window.location.href='woxwash5.html';">Back</button>
+    </section>
+
+    <script>
+        // Redirect to Frame 9 on submit
+        document.querySelector('.search-container').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent default form submission
+            window.location.href = 'woxwash9.html'; // Redirect to Frame 9
+        });
+    </script>
+</body>
+</html>

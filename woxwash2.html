@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Frame 2 - Student Login</title>
+  <style>
+    body {
+      margin: 0; /* Remove default body margin */
+      padding: 0; /* Remove default body padding */
+      background-color: #f4f4f4; /* Optional: Change background color */
+    }
+
+    .student-login-container {
+      max-width: 480px; /* Width of the container */
+      width: 100%; /* Full width */
+      padding: 131px 0; /* Padding at the top and bottom */
+      background-color: #fff; /* Background color of the container */
+      display: flex; /* Flexbox for alignment */
+      flex-direction: column; /* Column layout */
+      align-items: center; /* Center items */
+      overflow: hidden; /* Hide overflow */
+      font-family: Inter, sans-serif; /* Font style */
+      color: #000; /* Font color */
+      font-weight: 700; /* Font weight */
+      position: relative; /* Positioning context */
+      left: 0; /* Align left */
+    }
+
+    .header {
+      background-color: #d9d9d9; /* Header background color */
+      align-self: stretch; /* Stretch header to full width */
+      display: flex; /* Flexbox for header */
+      width: 100%; /* Full width */
+      justify-content: space-between; /* Space between header items */
+      padding: 5px 10px; /* Padding in header */
+    }
+
+    .header-title {
+      margin: auto; /* Center title */
+      font-size: 15px; /* Title font size */
+      line-height: 1; /* Line height */
+      flex-grow: 1; /* Allow title to grow */
+      text-align: center; /* Center text */
+    }
+
+    .back-button {
+      padding: 5px 10px; /* Padding for back button */
+      background-color: #ccc; /* Button background color */
+      border: none; /* No border */
+      cursor: pointer; /* Pointer cursor */
+      font-size: 12px; /* Button font size */
+    }
+
+    .profile-image {
+      aspect-ratio: 1; /* Aspect ratio for profile image */
+      object-fit: contain; /* Fit image within constraints */
+      width: 78px; /* Image width */
+      margin-top: 5px; /* Margin at the top */
+    }
+
+    .login-form {
+      background-color: #d3dddf; /* Form background color */
+      box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25); /* Box shadow */
+      display: flex; /* Flexbox for form */
+      margin-top: 16px; /* Margin at the top */
+      width: 100%; /* Full width */
+      max-width: 295px; /* Max width of form */
+      flex-direction: column; /* Column layout */
+      align-items: start; /* Align items to start */
+      font-size: 12px; /* Font size */
+      line-height: 22px; /* Line height */
+      padding: 45px 41px; /* Padding in form */
+    }
+
+    .form-label {
+      line-height: 2; /* Line height for labels */
+    }
+
+    .form-input {
+      background-color: #fff; /* Input background color */
+      box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25); /* Box shadow */
+      align-self: stretch; /* Stretch input */
+      display: flex; /* Flexbox for input */
+      height: 31px; /* Input height */
+      margin-top: 12px; /* Margin at the top */
+    }
+
+    .submit-button {
+      background-color: #ade499; /* Button background color */
+      box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25); /* Box shadow */
+      align-self: center; /* Center button */
+      margin-top: 29px; /* Margin at the top */
+      width: 157px; /* Button width */
+      max-width: 100%; /* Max width */
+      white-space: nowrap; /* Prevent text wrapping */
+      padding: 7px 58px; /* Padding in button */
+      border: 1px solid #6c706b; /* Border color */
+      cursor: pointer; /* Pointer cursor */
+    }
+  </style>
+</head>
+<body>
+  <section class="student-login-container">
+    <header class="header">
+      <button class="back-button" onclick="window.location.href='index.html'">Back</button>
+      <h1 class="header-title">Student Login</h1>
+    </header>
+    
+    <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/d69f82fb269ebaa8b22ebd3f77e09e7fe67084b0087e7a926dd4c0eb9a23c516?placeholderIfAbsent=true&apiKey=ed31dcacb8a645bd8098ead6bdd273d9" alt="Student profile placeholder" class="profile-image">
+    
+    <form class="login-form" action="woxwash4.html" method="GET">
+      <label for="name" class="form-label">Name :</label>
+      <input type="text" id="name" class="form-input" required>
+      
+      <label for="student-id" class="form-label">Student ID :</label>
+      <input type="text" id="student-id" class="form-input" required>
+      
+      <label for="block-room" class="form-label">Block / Room no:</label>
+      <input type="text" id="block-room" class="form-input" required>
+      
+      <label for="phone" class="form-label">Phone no:</label>
+      <input type="tel" id="phone" class="form-input" required>
+      
+      <label for="gender" class="form-label">Gender:</label>
+      <select id="gender" class="form-input" required>
+        <option value="">Select gender</option>
+        <option value="male">Male</option>
+        <option value="female">Female</option>
+        <option value="other">Other</option>
+      </select>
+      
+      <button type="submit" class="submit-button">Submit</button>
+    </form>
+  </section>
+</body>
+</html>

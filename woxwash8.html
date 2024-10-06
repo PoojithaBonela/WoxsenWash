@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=393, initial-scale=1.0">
+    <title>Frame 8 - Student Complaints</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body, html {
+            width: 393px;
+            height: 844px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #fff;
+            font-family: 'Inter', sans-serif;
+        }
+
+        .student-complaints-section {
+            background-color: #fff;
+            display: flex;
+            max-width: 393px;
+            width: 100%;
+            flex-direction: column;
+            overflow: hidden;
+            color: #000;
+            margin: 0 auto;
+            padding: 124px 0 193px;
+            font: 700 15px/1 Inter, sans-serif;
+        }
+
+        .header {
+            background-color: #d9d9d9;
+            display: flex;
+            width: 100%;
+            gap: 40px 64px;
+            padding: 7px 18px;
+        }
+
+        .header-icon {
+            aspect-ratio: 1.13;
+            object-fit: contain;
+            object-position: center;
+            width: 43px;
+        }
+
+        .header-title {
+            flex-grow: 1;
+            width: 239px;
+            margin: auto 0;
+        }
+
+        .complaint-form {
+            background-color: #d3dddf;
+            box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+            align-self: center;
+            display: flex;
+            margin-top: 73px;
+            width: 100%;
+            max-width: 297px;
+            flex-direction: column;
+            align-items: start;
+            padding: 31px 34px;
+        }
+
+        .form-input {
+            background-color: #fff;
+            box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+            display: flex;
+            margin-top: 13px;
+            width: 100%;
+            height: 39px;
+        }
+
+        .form-textarea {
+            background-color: #fff;
+            box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+            display: flex;
+            margin-top: 12px;
+            width: 100%;
+            height: 141px;
+        }
+
+        .submit-button {
+            background-color: #ade499;
+            box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+            align-self: center;
+            margin-top: 26px;
+            width: 157px;
+            max-width: 100%;
+            white-space: nowrap;
+            padding: 7px 52px;
+            border: 1px solid #6c706b;
+            cursor: pointer;
+        }
+
+        .back-button {
+            background-color: #f3f3f3;
+            border: none;
+            color: #000;
+            cursor: pointer;
+            padding: 10px 20px;
+            margin: 20px;
+        }
+
+        .visually-hidden {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            white-space: nowrap;
+            border: 0;
+        }
+    </style>
+</head>
+<body>
+    <section class="student-complaints-section">
+        <header class="header">
+            <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/3bd96beca5e6d946065ee240fcf9817088b098d4d32fb58b20ecfaa225833af5" class="header-icon" alt="Student Complaints Icon" />
+            <h1 class="header-title">Student Complaints</h1>
+        </header>
+        
+        <form class="complaint-form" id="complaintForm">
+            <label for="complaint-date" class="visually-hidden">Date:</label>
+            <input type="date" id="complaint-date" class="form-input" aria-label="Date of complaint" required />
+            
+            <label for="complaint-description" class="visually-hidden">Describe your issue:</label>
+            <textarea id="complaint-description" class="form-textarea" aria-label="Describe your issue" required></textarea>
+            
+            <button type="submit" class="submit-button">Submit</button>
+        </form>
+
+        <!-- Back Button -->
+        <button class="back-button" onclick="window.location.href='woxwash6.html';">Back</button>
+    </section>
+
+    <script>
+        // Redirect to Frame 10 on submit
+        document.getElementById('complaintForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent default form submission
+            window.location.href = 'woxwash10.html'; // Redirect to Frame 10
+        });
+    </script>
+</body>
+</html>

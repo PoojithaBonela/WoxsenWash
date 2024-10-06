@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=393, initial-scale=1.0">
+    <title>User Selection - Frame 1</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body, html {
+            width: 393px;
+            height: 844px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #fff;
+            font-family: 'Inter', sans-serif;
+        }
+
+        .user-selection {
+            max-width: 393px;
+            width: 100%;
+            height: 844px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-color: #fff;
+            overflow: hidden;
+        }
+
+        .logo {
+            width: 120px;
+            margin-bottom: 50px;
+        }
+
+        .main-icon {
+            width: 160px;
+            margin-bottom: 50px;
+        }
+
+        .option-button {
+            width: 300px;
+            padding: 20px;
+            margin: 10px 0;
+            background-color: #fff;
+            border: 1px solid #181616;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 15px;
+            cursor: pointer;
+            box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+            text-decoration: none; /* Remove underline */
+            color: inherit; /* Inherit text color */
+        }
+
+        .user-icon, .admin-icon {
+            width: 60px;
+        }
+
+        .user-type {
+            font-size: 20px;
+            font-weight: 600;
+        }
+    </style>
+</head>
+<body>
+    <section class="user-selection">
+        <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/a589bc6f09b513b4f5bb10db4c2743bcdd6f0155dcee443f35e72abbe590974e" alt="Company logo" class="logo" />
+        <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/f98beda30d53f93046b4c2c0ec7dea4a49770dc01773427a0673d203bc1cb94c" alt="Main application icon" class="main-icon" />
+
+        <!-- Student Option -->
+        <a href="woxwash2.html" class="option-button" role="button">
+            <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/9ecbf975d072adf599851636530dd95d9f7de96b2e140d08d805088021071f97" alt="Student icon" class="user-icon" />
+            <span class="user-type">Student</span>
+        </a>
+
+        <!-- Admin Option -->
+        <a href="woxwash3.html" class="option-button" role="button">
+            <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/c5c6339762e58ff5417be6ae32a1c806a69837ba2184e21f3bc976262ffd883b" alt="Admin icon" class="admin-icon" />
+            <span class="user-type">Laundry Admin</span>
+        </a>
+    </section>
+</body>
+</html>

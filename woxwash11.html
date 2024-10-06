@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=393, initial-scale=1.0">
+    <title>Frame 11 - Student Entry Confirmation</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body, html {
+            width: 393px;
+            height: 844px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #fff;
+            font-family: 'Inter', sans-serif;
+        }
+
+        .laundry-admin-section {
+            max-width: 393px;
+            width: 100%;
+            margin: 0 auto;
+            padding: 122px 0 200px;
+            background-color: #fff;
+            color: #000;
+            font: 700 15px/1 Inter, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            overflow: hidden;
+        }
+
+        .header {
+            align-self: stretch;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            padding: 7px 13px;
+            background-color: #d9d9d9;
+        }
+
+        .logo {
+            aspect-ratio: 1.13;
+            object-fit: contain;
+            object-position: center;
+            width: 43px;
+        }
+
+        .header-title {
+            margin: auto 0;
+            font-weight: 800;
+        }
+
+        .notification {
+            background-color: #d3dddf;
+            box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+            margin-top: 77px;
+            width: 284px;
+            max-width: 100%;
+            padding: 45px 30px;
+            border: 1px solid #d3dddf;
+            text-align: center;
+        }
+
+        .status-box {
+            background-color: #d3dddf;
+            box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+            display: flex;
+            margin-top: 38px;
+            width: 279px;
+            max-width: 100%;
+            justify-content: space-between;
+            padding: 16px 43px;
+            border: 1px solid #d3dddf;
+            cursor: pointer; /* Cursor pointer to indicate clickability */
+        }
+
+        .status-label {
+            border: 1px solid #d3dddf;
+        }
+
+        .status-checkbox {
+            background-color: #fff;
+            width: 30px;
+            height: 23px;
+            border: 1px solid #000;
+        }
+
+        .complaints-box {
+            background-color: #d3dddf;
+            box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+            margin-top: 38px;
+            width: 100%;
+            max-width: 279px;
+            padding: 16px 64px;
+            border: 1px solid #d3dddf;
+            text-align: center; /* Centered text */
+        }
+
+        .back-button {
+            background-color: #f3f3f3;
+            border: none;
+            color: #000;
+            cursor: pointer;
+            padding: 10px 20px;
+            margin: 20px;
+        }
+
+        .visually-hidden {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            white-space: nowrap;
+            border: 0;
+        }
+    </style>
+</head>
+<body>
+    <section class="laundry-admin-section">
+        <header class="header">
+            <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/3bd96beca5e6d946065ee240fcf9817088b098d4d32fb58b20ecfaa225833af5" alt="Laundry Admin Logo" class="logo">
+            <h1 class="header-title">Laundry Admin</h1>
+        </header>
+
+        <div class="notification" role="alert">
+            Student entry has been saved!
+        </div>
+
+        <div class="status-box" onclick="toggleCheckbox(this);">
+            <span class="status-label">Completed</span>
+            <div class="status-checkbox" role="checkbox" tabindex="0" aria-checked="false"></div>
+        </div>
+
+        <div class="status-box" onclick="toggleCheckbox(this);">
+            <span class="status-label">Picked up</span>
+            <div class="status-checkbox" role="checkbox" tabindex="0" aria-checked="false"></div>
+        </div>
+
+        <div class="complaints-box">
+            Complaints received
+        </div>
+
+        <!-- Back Button -->
+        <button class="back-button" onclick="window.location.href='woxwash8.html';">Back</button>
+    </section>
+
+    <script>
+        function toggleCheckbox(element) {
+            const checkbox = element.querySelector('.status-checkbox');
+            const isChecked = checkbox.getAttribute('aria-checked') === 'true';
+
+            // Toggle checkbox state
+            checkbox.setAttribute('aria-checked', !isChecked);
+            checkbox.style.backgroundColor = !isChecked ? 'green' : '#fff'; // Change color based on state
+        }
+    </script>
+</body>
+</html>
